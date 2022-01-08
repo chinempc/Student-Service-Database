@@ -1,7 +1,7 @@
 # Student Service Database
 
 ## Purpose
-Practice software desighn skills with a fairly simple problem.
+Practice software design skills with a fairly simple problem.
 
 ## Languages
 The program will be done in C# and SQL. 
