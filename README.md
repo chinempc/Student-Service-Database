@@ -1,5 +1,11 @@
 # Student Service Database
 
+## Purpose
+Practice software desighn skills with a fairly simple problem.
+
+## Languages
+The program will be done in C# and SQL. 
+
 ## Problem 
 The Tech With Tim school of programmers needs a new system to track all of its students, professors and courses. It wants to keep track of what courses are offered, who teaches each course and which students are enrolled in those courses. It would also like to be able to track the grades of each of its students across all courses. For each student and professor the school needs to know their address, phone number, name and age.
 
