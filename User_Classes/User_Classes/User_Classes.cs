@@ -2,25 +2,41 @@
 
 namespace User_Classes
 {
-    public class User/*Question for User chinempc: Do you think we should have classes with inheritence or just classes?*/
+    public class Address : Person/*(Still stands) Question for User chinempc: Do you think we should have classes with inheritence or just classes?*/
     {
-        public User()
-        {
-            ;
-        }
-        ~User()
+        //Should this class inherit from class Person?
+        string Street;
+        int streetNumber;
+        string City;
+        string State;
+        string Country;
+        int zipCode;
+
+        Address()
         {
 
         }
+        ~Address()
+        {
+
+        }
+    
     }
-    public class Student : User
-    {
-        string sFName;
-        string sLName;
-        string address;
-        int age;
-        int phone_Number;//String or int?
 
+    public class Person
+    {
+        string professorName;
+        string dateOfBirth;
+        Address Ad;
+        int phoneNum;
+    }
+
+    public class Student : Person
+    {
+        bool international;
+        bool fullTime;
+        bool academicPro;
+        int maxCourses;
         Student()
         {
 
@@ -28,18 +44,37 @@ namespace User_Classes
 
         ~Student()
         {
-            ;
-        }
-            
-    }
-    public class Professor : User
-    {
-        string pFName;
-        string pLName;
-        string address;
-        int age;
-        int phone_Number;//String or int?
 
+        }
+
+        bool IsPartTime()
+        {
+            if(fullTime == false)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        bool IsOnProbation()
+        {
+            if (academicPro == false)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    }
+    public class Professor : Person
+    {
+        double salary;
+        int salaryBonus = 20000;
+        int numOfCourses;
         Professor()
         {
 
@@ -48,10 +83,31 @@ namespace User_Classes
         {
 
         }
+        bool BonusEligable()
+        {
+            if(numOfCourses > 4)
+            {
+                salary += salaryBonus;
+                return true;
+            }
+            else
+            {
+                //Do nothing...
+                return false;
+            }
+        }
     }
     public class Courses
     {
-        /*Should we use an enumerator(enum) for this or am I over thinking it...*/
+        
+        string courseName;
+        string courseCode;
+        int minStudents = 5; //example
+        int maxStudents;
+        int numOfStudents;
+
+        public
+
         Courses()
         {
 
@@ -60,6 +116,23 @@ namespace User_Classes
         {
 
         }
+
+        bool IsCancelled()
+        {
+            if(numOfStudents < minStudents)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+    public class Enroll : Courses
+    {
+        string date;//data type???
+        float grade;
     }
     public class User_Classes //Driver class where Main will be executed...
     {
