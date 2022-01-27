@@ -1,13 +1,11 @@
-using System; // Basic utility classes and primitive types
-using System.Collections.Generic; // Lists, collections, etc..
-using System.Linq;                  // Data
-using System.Text;                  // Text and encoding
-using System.Threading.Tasks;       // Multithreading 
+using System; 
+using System.Collections.Generic; 
+using System.Linq;                  
+using System.Text;                  
 
 namespace StudentServiceDatabase {
     class main {
         static void Main(string[] args) {
-            Console.WriteLine("Hello World!");
         }
     }
 }
