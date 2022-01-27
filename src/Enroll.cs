@@ -4,7 +4,6 @@ using System.Runtime.dll
 
 namespace StudentServiceDatabase {
     public class Enroll {
-        // Date time for loggin when a student was registered to take a course
 	private DateTime DateCreated;
         private int Grade { get; set;}
         private Student EnrolledStudent;
