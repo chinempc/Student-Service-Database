@@ -11,7 +11,7 @@ namespace StudentServeData
         private string firstName;
         private string lastName;
         private DateTime dateOfBirth;
-        //Address Ad;
+        Address Ad;
         private string phoneNumber;
 
         Person(string fname, string lname, DateTime dateB, string phoneNum)
@@ -21,10 +21,16 @@ namespace StudentServeData
             dateOfBirth = dateB;
             phoneNumber = phoneNum;
         }
+        
+        public void  AddAddress(Address NewAddress) {
+            Ad.Add(NewAddress);
+        }
 
-        public void AddAddress()
-        {
-            ;
+        public void AddAddress(Address[] NewAddresses) {
+            // Adding multiple Addresses at a time
+            foreach (var i in NewAddresses) {
+                Ad.Add(i);
+            }
         }
     }
 }
