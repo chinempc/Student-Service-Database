@@ -24,13 +24,19 @@ namespace StudentServeData
         
         public void  AddAddress(Address NewAddress) {
             Ad.Add(NewAddress);
+            Console.WriteLine("Address Added...");
         }
 
-        public void AddAddress(Address[] NewAddresses) {
+        public void AddAddress(Address[] NewAddresses) { 
             // Adding multiple Addresses at a time
             foreach (var i in NewAddresses) {
                 Ad.Add(i);
+                Console.WriteLine("Address Added...");
             }
+        }
+        public void RemoveAddress()
+        {
+            ;
         }
     }
 }
