@@ -75,6 +75,8 @@ namespace StudentServiceDatabase
         }
 
         public void ChangeStudentGrade(Student stud, Course StudentCourse int ChangedGrade)
-        {}
+        {
+            // For Chris to finish
+        }
     }
 }
