@@ -28,7 +28,7 @@ namespace StudentServiceDatabase
 	    return total/EnrolledIn.Count < 60;
         }
 
-        public void AddCourse(CourseToEnroll)
+        public void AddCourse(Enroll CourseToEnroll)
         {
 	    if(this.enrollees.Count < 6) {
 	    	EnrolledIn.Add(CourseToEnroll)
@@ -36,8 +36,13 @@ namespace StudentServiceDatabase
 	    	Console.WriteLine("Enroll failed; {0} has reached the max amount of coursese they can enroll in.", this.FirstName);
 	    }
         }
+	
+	public void AddCourses(Enroll[] CourseToEnroll)
+	{
+            // For Chris to finish
+	}
 
-        public void RemoveCourse(CourseToRemove)
+        public void RemoveCourse(Enroll CourseToRemove)
         {
 	    if(!EnrolledIn.Remove(CourseToRemove)) {
 	    	Console.WriteLine("Course does not exist...");
@@ -45,6 +50,11 @@ namespace StudentServiceDatabase
 	    	Console.WriteLine("Course has been removed...");
 	    }
         }
+	
+	public void RemoveCourse(Enroll[] CoursesToRemove)
+        {
+	    // For Chris to finish
+	}
 
         public void ReportCard()
         {
