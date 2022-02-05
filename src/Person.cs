@@ -11,15 +11,16 @@ namespace StudentServiceDatabase
         private string firstName;
         private string lastName;
         private DateTime dateOfBirth;
-        Address Ad;
+        List<Address> addresses = new List<Address>();
         private string phoneNumber;
 
-        Person(string fname, string lname, DateTime dateB, string phoneNum)
+        Person(string fname, string lname, DateTime dateB, string phoneNum, Address ad)
         {
             firstName = fname;
             lastName = lname;
             dateOfBirth = dateB;
             phoneNumber = phoneNum;
+            addresses.Add(ad);
         }
         
         public void  AddAddress(Address NewAddress) {
@@ -34,9 +35,24 @@ namespace StudentServiceDatabase
                 Console.WriteLine("Address Added...");
             }
         }
-        public void RemoveAddress()
+        
+        public void RemoveAddress(Address AddressToRemove)
         {
-            ;
+            if(!addresses.Remove(AddressToRemove)) {
+                Console.WriteLine("Address does not exist...");
+            } else {
+                Console.WriteLine("Address has been removed...");
+            }
+        }
+       
+        public void RemoveAdresses(Address[] AddressesToRemove) {
+            foreach(var i in AddressesToRemove) {
+                if(!addresses.Remove(AddressToRemove)) {
+                    Console.Log("Address does not exist...");
+                } else {
+                    Console.WriteLine("Address has been removed...");   
+                }
+            }
         }
     }
 }
