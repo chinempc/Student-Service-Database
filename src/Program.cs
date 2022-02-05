@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;                  
 
 namespace StudentServiceDatabase {
-    class main {
+    class Program {
         static void Main(string[] args) {
         }
     }
