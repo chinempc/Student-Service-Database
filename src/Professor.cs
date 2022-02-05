@@ -41,7 +41,7 @@ namespace StudentServiceDatabase
             teaching.Add(CourseToAdd);
         }
 
-        public void AddCourses(Courses CoursesToAdd) {
+        public void AddCourses(Courses[] CoursesToAdd) {
             if(teaching.Count < MaxCourses & CoursesToAdd.Length <= MaxCourses - teaching.Count) {
                 foreach (var i in CoursesToAdd) {
                     // account for duplicates
@@ -68,28 +68,13 @@ namespace StudentServiceDatabase
             }
         }
 
-        public vod RemoveCourses(Courses CoursesToRemove) {
+        public vod RemoveCourses(Courses[] CoursesToRemove) {
             foreach (var i in CoursesToRemove) {
                 teaching.Remove(i);
             }
         }
 
         public void ChangeStudentGrade(Student stud, Course StudentCourse int ChangedGrade)
-        {
-            // Assume that all the information passed in is correct
-            for (int i = 0; i<teaching.Count; i++) {
-                // find the index that matches the course
-                if (teaching[i] == StudentCourse) {
-                    // Find the index that matches the student
-                    for (int j = 0; j<teaching[i].enrollees.Count; j++) {
-                        if (teaching[i].enrollees[j].GetStudent() == stud) {
-                            teaching[i].enrollees[j].SetGrade(ChangedGrade);
-                        }
-                    }
-                }
-
-            }
-            
-        }
+        {}
     }
 }
