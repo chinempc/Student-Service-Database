@@ -5,8 +5,8 @@ using System.Collections.Generic;
 namespace StudentServiceDatabase {
     public class Courses {
         public int MinStudents, MaxStudents, CourseCode;
-        public Lists<professor> professors = new List<professor>();
-        Lists<enroll> enrollees = new List<enroll>();
+        public List<professor> professors = new List<professor>();
+        List<enroll> enrollees = new List<enroll>();
 
         public Courses(int min, int max, int code, professor BaseProfessor) {
             MinStudents = min;
